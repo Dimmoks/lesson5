@@ -32,9 +32,8 @@ p {
 }
 
 .factoryWrap {
-    height: 10em;
-    display: flex;
-    align-items: center;
+    display: grid;
+    align-content: center;
     justify-content: center;
 }
 
@@ -162,4 +161,10 @@ p {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+}
+.automobileText {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
 }

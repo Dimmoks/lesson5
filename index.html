@@ -34,6 +34,8 @@
                     <button class="buttonAddAutomobile" id="buttonAddAutomobile" onclick="buttonclick()">Додати</button>
                 </div>
             </div>
+            <div class="automobileContainer" id="automobileContainer" >
+            </div>
         </div>
     </div>
 
@@ -57,6 +59,14 @@
             let color = auto.automobileColorShow();
 
             console.log(`У вашого автомобіля об'єм двигуна ${volume}л та ${color} колір.`);
+
+            const autoContainer = document.getElementById('automobileContainer');
+
+            const autoText = document.createElement('div');
+            autoText.innerHTML = `У вашого автомобіля об'єм двигуна ${volume}л <br> та ${color} колір.`;
+            autoText.className = 'automobileText';
+            autoContainer.appendChild(autoText);
+
 
         }
 
