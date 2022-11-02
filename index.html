@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>Lesson 5</p>
+        <div class="headerText">
+            Automobile Factory
+        </div>
+        <div class="factoryWrap">
+            <div class="factoryCard">
+                <div class="headerTextFactory">
+                    Виберіть властивості автівки
+                </div>
+                <div class="factoryContainer">
+                    <div class="textEngineVolue">
+                        Об'єм двигуна
+                    </div>
+                    <input class="inputEngineVolume" id="inputEngieVolume" type="number" placeholder="Введіть об'єм двигуна">
+                </div>
+                <div class="automobileColorContainer">
+                    <div class="textAutomobileColor">
+                        Колір
+                    </div>
+                    <input class="inputAutomobileColor" id="inputAutomobileColor" type="text" placeholder="Введіть колір">
+                </div>
+                <div class="buttonWrap">
+                    <button class="buttonAddAutomobile" id="buttonAddAutomobile" onclick="buttonclick()">Додати</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function buttonclick() {
+            class automobileFactory {
+                engineVolumeShow() {
+                    let inputOne = document.querySelector('.inputEngineVolume').value;
+                    return inputOne
+                }
+
+                automobileColorShow() {
+                    let inputTwo = document.querySelector('.inputAutomobileColor').value;
+                    return inputTwo;
+                }
+            }
+
+            let auto = new automobileFactory();
+            let volume = auto.engineVolumeShow();
+            let color = auto.automobileColorShow();
+
+            console.log(`У вашого автомобіля об'єм двигуна ${volume}л та ${color} колір.`);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
